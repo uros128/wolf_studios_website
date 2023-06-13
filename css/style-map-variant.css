@@ -110,7 +110,7 @@ table {
 }
 
 #loading #preloader:after {
-  content: "Phly is loading";
+  content: "Wolf Studios is loading";
   /* Text under the circles */
   position: absolute;
   text-transform: uppercase;
