@@ -1,36 +1,33 @@
 <?php
+/*SendGrid Library*/
+require_once ('vendor/autoload.php');
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$subject = $_POST["subject"];
-$message = $_POST["message"];
+/*Post Data*/
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 
-require "vendor/autoload.php";
+/*Content*/
+$from = new SendGrid\Email("AAA", "juhu.plastika@gmail.com");
+$subject = "SUBJECT";
+$to = new SendGrid\Email("Fat ", "contact@wolf-studios.info");
+$content = new SendGrid\Content("text/html", "
+Email : {$email}
+");
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+/*Send the mail*/
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
+$apiKey = ('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');
+$sg = new \SendGrid($apiKey);
 
-$mail = new PHPMailer(true);
+/*Response*/
+$response = $sg->client->mail()->send()->post($mail);
+?>
 
-// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+<!--Print the response-->
+<pre>
+    <?php
+    var_dump($response);
+    ?>
+</pre>
 
-$mail->isSMTP();
-$mail->SMTPAuth = true;
-
-$mail->Host = "smtp.sendgrid.net";
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port = 465;
-
-$mail->Username = "apikey";
-$mail->Password = "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
-";
-
-$mail->setFrom($email, $name);
-$mail->addAddress("contact@wolf-studios.info", "Wolf Studios");
-
-$mail->Subject = $subject;
-$mail->Body = $message;
-
-$mail->send();
-
-header("Location: sent.html");
