@@ -1,8 +1,8 @@
 <?php
 if($_POST) {
 
-    $to_Email = 'myemail@email.com'; // Write your email here to receive the form submissions
-    $subject = 'New message from PHLY'; // Write the subject you'll see in your inbox
+    $to_Email = 'contact@wolf-studios.info'; // Write your email here to receive the form submissions
+    $subject = 'New message from Wolf Studios Website'; // Write the subject you'll see in your inbox
    
     // Use PHP To Detect An Ajax Request
     if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
@@ -44,7 +44,7 @@ if($_POST) {
     // Proceed with PHP email
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type:text/html;charset=UTF-8' . "\r\n";
-    $headers .= 'From: PHLY Template <noreply@yourdomain.com>' . "\r\n"; // As an example, the 'From' address should be set to something like 'noreply@yourdomain.com' in order to be based on the same domain as the form.
+    $headers .= 'From: Wolf studios <noreply@wolf-studios.info>' . "\r\n"; // As an example, the 'From' address should be set to something like 'noreply@yourdomain.com' in order to be based on the same domain as the form.
     $headers .= 'Reply-To: '.$_POST["userEmail"]."\r\n";
     
     'X-Mailer: PHP/' . phpversion();
