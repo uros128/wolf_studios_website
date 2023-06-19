@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dialog-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .dialog-content h2 {
+        margin-top: 0;
+      }
+
+      .dialog-content button {
+        margin-top: 10px;
+      }
+    </style>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </head>
+  <body>
+    <!-- JS FORM with Thank you message-->
+    <form action="#" class="form-contact">
+      <input type="text" name="fname" id="fname" required />
+      <input type="email" name="email" id="email" required />
+      <textarea type="text" name="message" id="message" required></textarea>
+      <button id="submit" type="submit">Send my message</button>
+    </form>
+
+    <div id="custom-dialog" class="dialog">
+      <div class="dialog-content">
+        <h2>Thank you for your message</h2>
+        <p></p>
+        <button id="close-dialog">OK</button>
+      </div>
+    </div>
+    <!-- JS FORM with Thank you message-->
+
+    <script src="js/contact-email.js"></script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us" class="no-js">
   <head>
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
    <style>
  .more-info {
   max-height: 0;
@@ -12,7 +13,37 @@
   max-height: 500px; /* Adjust the height as needed */
   transition: max-height 2s ease-in;
 }
+
+
+      .dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dialog-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .dialog-content h2 {
+        margin-top: 0;
+      }
+
+      .dialog-content button {
+        margin-top: 10px;
+      }
+    
 </style>
+<!-- CSS for more info and for thank you box --> 
 
 
     <meta charset="utf-8" />
@@ -57,6 +88,21 @@
 
     <!-- Modernizr runs quickly on page load to detect features -->
     <script src="js/modernizr.custom.js"></script>
+
+
+
+
+    <script src="js/script.js"></script>
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("pQrWC-CyNJL6Sjv-z");
+   })();
+</script>
   </head>
 
   <body>
@@ -516,14 +562,13 @@
           expectations. Contact us now and embark on a thrilling journey of
           visual storytelling that will set your brand apart.
         </p>
+<!-- JS FORM with Thank you message-->
+  
 
+  
         <!-- START - Contact Form -->
-        <form
+        <form class="form-contact" action="#"
           id="contact-form"
-          name="contact-form"
-          method="POST"
-          data-name="Contact Form"
-          action="send-email.php"
         >
           <div class="row">
             <!-- Full name -->
@@ -531,13 +576,13 @@
               <div class="form-group">
                 <input
                   type="text"
-                  id="name"
+                  name="fname" id="fname"
                   class="form form-control"
                   placeholder="Your Name"
                   onfocus="this.placeholder = ''"
                   onblur="this.placeholder = 'Your Name'"
-                  name="name"
-                  data-name="Name"
+                  
+                
                   required
                 />
               </div>
@@ -553,14 +598,16 @@
                   placeholder="Your Email"
                   onfocus="this.placeholder = ''"
                   onblur="this.placeholder = 'Your Email'"
-                  name="email-address"
-                  data-name="Email Address"
+                  name="email"
+                 
                   required
                 />
               </div>
             </div>
+              
 
             <!-- Subject -->
+            <!--
             <div class="col-xs-12 col-sm-12 col-lg-12">
               <div class="form-group">
                 <input
@@ -569,24 +616,24 @@
                   class="form form-control"
                   placeholder="Write the subject"
                   onfocus="this.placeholder = ''"
-                  onblur="this.placeholder = 'Write the subject'"
+                  onblur="this.placeholder = 'Write thsse subject'"
                   name="subject"
                   data-name="Subject"
                 />
               </div>
             </div>
-
+-->
             <!-- Message -->
             <div class="col-xs-12 col-sm-12 col-lg-12 no-padding">
               <div class="form-group">
                 <textarea
-                  id="text-area"
+                  id="message"
                   class="form textarea form-control"
                   placeholder="Your message here... 20 characters Min."
                   onfocus="this.placeholder = ''"
                   onblur="this.placeholder = 'Your message here... 20 characters Min.'"
                   name="message"
-                  data-name="Text Area"
+                  
                   required
                 ></textarea>
               </div>
@@ -594,10 +641,11 @@
           </div>
 
           <!-- Button submit -->
-          <button type="submit" id="valid-form" class="btn btn-color">
-            Send my Message
-          </button>
+        <button id="valid-form" type="submit" class="btn btn-color">Send Message</button>
+            
+         
         </form>
+         <script src="js/contact-email.js"></script>
         <!-- END - Contact Form -->
 
         <!-- Answer for the contact form is displayed in the next div, do not remove it. -->
@@ -764,14 +812,18 @@ function scrollToDiv(divId) {
   targetDiv48.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
+
     <!-- /. Root element of PhotoSwipe. Must have class pswp. -->
 
     <!-- ///////////////////\\\\\\\\\\\\\\\\\\\ -->
     <!-- ********** Resources jQuery ********** -->
     <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
+    
 
+   
     <!-- * Libraries jQuery, Easing and Bootstrap - Be careful to not remove them * -->
     <script src="js/jquery.min.js"></script>
+    
     <script src="js/jquery.easings.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
@@ -784,8 +836,8 @@ function scrollToDiv(divId) {
     <!-- Newsletter plugin -->
     <script src="js/notifyMe.js"></script>
 
-    <!-- Contact form plugin -->
-    <script src="js/contact-me.js"></script>
+    <!-- Contact form plugin 
+    <script src="js/contact-me.js"></script>-->
 
     <!-- Slideshow/Image plugin -->
     <script src="js/vegas-youtube-mobile.js"></script>
