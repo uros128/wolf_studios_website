@@ -673,14 +673,24 @@
         <div id="block-answer">
           <div id="answer"></div>
         </div>
+<script>
+    function revealHiddenDigits() {
+      var hiddenDigits = document.getElementById('hidden');
+      hiddenDigits.innerText = '888';
+    }
+  </script>
 
         <div class="info-contact row">
           <div class="col-xs-12 col-sm-4 col-lg-4 item-map">
             <div class="contact-item">
               <i class="icon ion-ios-telephone"></i>
-              <p>Phone: (+44) 079-07079-888</p>
+              <p id="phone">
+    Phone: (+44) 079 07 079 <span id="hidden" onmouseover="revealHiddenDigits()">***</span>
+  </p>
+
             </div>
           </div>
+          
 
           <div class="col-xs-12 col-sm-4 col-lg-4 item-map">
             <div class="contact-item">
@@ -697,6 +707,7 @@
                   >contact@wolf-studios.info</a
                 >
               </p>
+              
             </div>
           </div>
         </div>
