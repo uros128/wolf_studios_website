@@ -94,7 +94,7 @@ $(document).ready(function () {
     $(".mCSB_scrollTools").toggleClass("mCSB_scrollTools-left");
     setTimeout(function () {
       $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side", {
-        scrollInertia: 500,
+        scrollInertia: 5500,
         callbacks: false,
       });
     }, 350);
@@ -107,7 +107,7 @@ $(document).ready(function () {
     $(".mCSB_scrollTools").removeClass("mCSB_scrollTools-left");
     setTimeout(function () {
       $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side", {
-        scrollInertia: 500,
+        scrollInertia: 5000,
         callbacks: false,
       });
     }, 350);
@@ -121,7 +121,7 @@ $(document).ready(function () {
     $(".mCSB_scrollTools").toggleClass("mCSB_scrollTools-left");
     setTimeout(function () {
       $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-contact", {
-        scrollInertia: 500,
+        scrollInertia: 5000,
         callbacks: false,
       });
     }, 350);
