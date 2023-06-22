@@ -205,7 +205,7 @@ $(document).ready(function () {
       });
     } else {
       $("body").mCustomScrollbar({
-        scrollInertia: 150,
+        scrollInertia: 4000,
         axis: "y",
       });
     }
