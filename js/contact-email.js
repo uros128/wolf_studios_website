@@ -1,9 +1,8 @@
 const fname = document.getElementById("fname");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
-//const submit = document.getElementById("submit");
-
 const submit = document.getElementsByClassName("form-contact")[0];
+const hiddenDiv = document.getElementById("hidden-div12");
 
 submit.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -22,7 +21,26 @@ submit.addEventListener("submit", (e) => {
     From: "wolfstudios128@gmail.com",
     Subject: "Email from my Website: Wolf-Studios.info from " + email.value,
     Body: ebody,
-  }).then((message) =>
-    alert("Your message was sent sucessfully! Thank you for your message.")
-  );
+  }).then((message) => {
+    showHiddenDiv();
+    document.getElementById("contact-form").reset();
+  });
 });
+
+function showHiddenDiv() {
+  hiddenDiv.style.opacity = "0";
+  hiddenDiv.style.display = "block";
+  fadeIn(hiddenDiv);
+}
+
+function fadeIn(element) {
+  let opacity = 0;
+  const interval = setInterval(() => {
+    if (opacity < 1) {
+      opacity += 0.1;
+      element.style.opacity = opacity;
+    } else {
+      clearInterval(interval);
+    }
+  }, 100);
+}

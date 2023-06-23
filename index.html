@@ -3,6 +3,9 @@
   <head>
      <script src="https://smtpjs.com/v3/smtp.js"></script>
    <style>
+
+
+
    
  .more-info {
   max-height: 0;
@@ -130,17 +133,10 @@
 
 
 
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 
 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("pQrWC-CyNJL6Sjv-z");
-   })();
-</script>
+
   </head>
 
   <body>
@@ -849,6 +845,7 @@ Through the strategic implementation of our technical expertise and cutting-edge
 
   
         <!-- START - Contact Form -->
+        
         <form class="form-contact" action="#"
           id="contact-form"
         >
@@ -924,11 +921,23 @@ Through the strategic implementation of our technical expertise and cutting-edge
 
           <!-- Button submit -->
         <button id="valid-form" type="submit" class="btn btn-color">Send Message</button>
-            
+            <div id="hidden-div12" class="hidden12">
+            </br>
+
+  <h3 id="thanks12">Thank you for your message.</h3><h4> Someone will reply to you shortly.</h4>
+  <!-- Content of the hidden div -->
+</div>
          
         </form>
+
+
+
          <script src="js/contact-email.js"></script>
         <!-- END - Contact Form -->
+
+        
+
+  
 
         <!-- Answer for the contact form is displayed in the next div, do not remove it. -->
         <div id="block-answer">
@@ -979,103 +988,9 @@ Through the strategic implementation of our technical expertise and cutting-edge
         <p>© Wolf Studios 2017-2023</p>
       </footer>
     </section>
-    <!-- START - More Informations/Right Part -->
 
-    <!-- Button Cross to close the More Informations/Right Part -->
-    <button id="close-more-info" class="hide-close">
-      <i class="fas fa-times"></i>
-    </button>
 
-    
-        <!-- /. dialog-inner -->
-
-        <!-- Button Cross to close the Newsletter Popup -->
-        <button class="close-newsletter" data-dialog-close>
-          <i class="far fa-times-circle"></i>
-        </button>
-      </div>
-      <!-- /. dialog__content -->
-    </div>
-    <!-- END - Newsletter Popup -->
-
-    <!-- Root element of PhotoSwipe, the gallery. Must have class pswp. -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-      <!-- Background of PhotoSwipe. 
-	        	It's a separate element as animating opacity is faster than rgba(). -->
-      <div class="pswp__bg"></div>
-
-      <!-- Slides wrapper with overflow:hidden. -->
-      <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-		            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-		            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <!--  Controls are self-explanatory. Order can be changed. -->
-
-            <div class="pswp__counter"></div>
-
-            <button
-              class="pswp__button pswp__button--close"
-              title="Close (Esc)"
-            ></button>
-
-            <button
-              class="pswp__button pswp__button--share"
-              title="Share"
-            ></button>
-
-            <button
-              class="pswp__button pswp__button--fs"
-              title="Toggle fullscreen"
-            ></button>
-
-            <button
-              class="pswp__button pswp__button--zoom"
-              title="Zoom in/out"
-            ></button>
-
-            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-            <!-- element will get class pswp__preloader--active when preloader is running -->
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
-          >
-            <div class="pswp__share-tooltip"></div>
-          </div>
-
-          <button
-            class="pswp__button pswp__button--arrow--left"
-            title="Previous (arrow left)"
-          ></button>
-
-          <button
-            class="pswp__button pswp__button--arrow--right"
-            title="Next (arrow right)"
-          ></button>
-
-          <div class="pswp__caption">
-            <div class="pswp__caption__center"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+ 
 
     <script>
 function toggleMoreInfo(divNumber) {
@@ -1117,11 +1032,8 @@ function scrollToDiv(divId) {
     <!-- Accelerated JavaScript animation UI JS file -->
     <script src="js/velocity.ui.min.js"></script>
 
-    <!-- Newsletter plugin -->
-    <script src="js/notifyMe.js"></script>
+ 
 
-    <!-- Contact form plugin 
-    <script src="js/contact-me.js"></script>-->
 
     <!-- Slideshow/Image plugin -->
     <script src="js/vegas-youtube-mobile.js"></script>
@@ -1135,15 +1047,8 @@ function scrollToDiv(divId) {
     <!-- Custom Scrollbar plugin -->
     <script src="js/jquery.mCustomScrollbar.js"></script>
 
-    <!-- Popup Newsletter Form -->
-    <script src="js/classie.js"></script>
-    <script src="js/dialogFx.js"></script>
 
-    <!-- PhotoSwipe Core JS file -->
-    <script src="js/photoswipe.js"></script>
 
-    <!-- PhotoSwipe UI JS file -->
-    <script src="js/photoswipe-ui-default.js"></script>
 
     <!-- Main JS File -->
     <script src="js/main.js"></script>

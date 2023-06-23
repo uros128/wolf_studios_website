@@ -1,11 +1,3 @@
-/*
-* PHLY - Versatile Coming Soon Template
-* Build Date: October 2015
-* Last Update: October 2018
-* Author: Madeon08
-* Copyright (C) 20XX Madeon08
-* This is a premium product available exclusively here : https://themeforest.net/user/Madeon08/portfolio
-*/
 /*  TABLE OF CONTENTS
     ---------------------------
     *. @Import & Reset
@@ -128,6 +120,9 @@ video {
   vertical-align: baseline;
 }
 
+.hidden12 {
+  display: none;
+}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -2439,6 +2434,29 @@ sup {
 #contact-form button#valid-form:hover {
   background: #00af94;
   color: #ffffff;
+}
+/*ct-form button#valid-form12 {
+  font-weight: 400;
+  padding: 1em 2em;
+  font-size: 1em;
+  display: block;
+  margin: 0 auto 0;
+  background: red;
+  color: #ffffff;
+  border-radius: 0;
+  font-weight: 700;
+  width: 100%;
+  line-height: 10px;
+}
+
+#contact-form button#valid-form12:hover {
+  background: #00af94;
+  color: #ffffff;
+}
+*/
+#thanks12 {
+  margin-bottom: 5px;
+  color: #00af94 !important;
 }
 
 #block-answer {
