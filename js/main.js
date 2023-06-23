@@ -213,6 +213,30 @@ $(document).ready(function () {
 
   scrollbar();
 
+  function scrollbar12() {
+    if (ifTouchDevices) {
+      $("body").addClass("scroll-touch");
+
+      $("a#open-more-info-contact").on("click", function () {
+        event.preventDefault();
+        var target = "#" + this.getAttribute("data-target");
+        $("html, body").animate(
+          {
+            scrollTop: $(target).offset().top,
+          },
+          500
+        );
+      });
+    } else {
+      $("body").mCustomScrollbar({
+        scrollInertia: 900,
+        axis: "y",
+      });
+    }
+  }
+
+  scrollbar12();
+
   // Tooltips used on YouTube buttons
   if (window.matchMedia("(min-width: 1025px)").matches) {
     $(function () {
