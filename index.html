@@ -305,12 +305,29 @@
               <!-- Link to the picture and to open the gallery / Fill up well the data-size property -->
              
                 <!-- Your picture -->
-                <img
-                  src="img/tap5star_3d_animation.jpg"
-                  itemprop="thumbnail"
+                <video id="videoPlayer" loop itemprop="thumbnail"
                   alt="Wolf Studios portfolio picture - tap5star 3d phone animation"
                   class="img-fluid"
-                />
+                >
+                 <source src="img/3d_phone.webm" type="video/webm">
+        </video>
+        <script>
+        document.getElementById("videoPlayer").controls = false;
+    var videoPlayer = document.getElementById('videoPlayer');
+
+    // Auto play, half volume.
+ 
+    // Play / pause.
+    videoPlayer.addEventListener('click', function () {
+        if (videoPlayer.paused == false) {
+            videoPlayer.pause();
+            videoPlayer.firstChild.nodeValue = 'Play';
+        } else {
+            videoPlayer.play();
+            videoPlayer.firstChild.nodeValue = 'Pause';
+        }
+    });
+</script>
                 
              
 
@@ -371,12 +388,32 @@ The animation was meticulously crafted with attention to detail, ensuring a seam
               <!-- Link to the picture and to open the gallery / Fill up well the data-size property -->
              
                 <!-- Your picture -->
-                <img
-                  src="img/gallery-1.jpg"
-                  itemprop="thumbnail"
+                <video id="videoPlayer2" loop itemprop="thumbnail"
                   alt="Wolf Studios portfolio picture - VFX Face Track"
                   class="img-fluid"
-                />
+                >
+                        <source src="img/gallery-1.webm" type="video/webm">
+                </video>
+                <script>
+                document.getElementById("videoPlayer").controls = false;
+            var videoPlayer12 = document.getElementById('videoPlayer2');
+
+            // Auto play, half volume.
+        
+            // Play / pause.
+            videoPlayer12.addEventListener('click', function () {
+                if (videoPlayer12.paused == false) {
+                    videoPlayer12.pause();
+                    videoPlayer12.firstChild.nodeValue = 'Play';
+                } else {
+                    videoPlayer12.play();
+                    videoPlayer12.firstChild.nodeValue = 'Pause';
+                }
+            });
+        </script>
+
+                
+             
                 
              
 
