@@ -16,7 +16,7 @@ submit.addEventListener("submit", (e) => {
                 <br>`;
 
   Email.send({
-    SecureToken: "3b990abc-d36b-4255-9997-7151d8faae00",
+    SecureToken: "afbe6018-76e1-4166-896c-251848da6805",
     To: "wolfstudios128@gmail.com",
     From: "wolfstudios128@gmail.com",
     Subject: "Email from my Website: Wolf-Studios.info from " + email.value,
