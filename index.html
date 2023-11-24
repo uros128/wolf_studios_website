@@ -7,6 +7,45 @@
    <style>
 
 
+.image-grid2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 1000px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.image-grid-item2 {
+    flex: 0 0 calc(50% - 10px); /* 25% minus margin */
+    margin: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.image-grid-item2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+    .image-grid-item2 {
+        flex: 0 0 calc(100% - 10px); /* 100% minus margin */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .image-grid-item2 {
+        flex: 0 0 calc(50% - 10px); /* 50% minus margin for tablets */
+    }
+}
+   
+
+
 .image-grid1 {
     display: flex;
     flex-wrap: wrap;
@@ -329,6 +368,189 @@
             itemtype="http://schema.org/ImageGallery"
           >
 
+<!-- Item Kilu -->
+
+
+
+            <!-- Item boit -->
+            <figure
+              itemprop="associatedMedia"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+              class="col-12 col-lg-12"
+            >
+              <!-- Link to the picture and to open the gallery / Fill up well the data-size property -->
+             
+                <!-- Your picture -->
+                <video id="videoPlayerKilu"  itemprop="thumbnail"
+                  alt="Wolf Studios portfolio picture - Kiluminati"
+                  class="img-fluid"
+                >
+                 <source src="img/kilu.webm" type="video/webm">
+        </video>
+        <script>
+        document.getElementById("videoPlayerKilu").controls = false;
+    var videoPlayerKilu = document.getElementById('videoPlayerKilu');
+
+    // Auto play, half volume.
+ 
+    // Play / pause.
+    videoPlayerKilu.addEventListener('click', function () {
+        if (videoPlayerKilu.paused == false) {
+            videoPlayerKilu.pause();
+            videoPlayerKilu.firstChild.nodeValue = 'Play';
+        } else {
+            videoPlayerKilu.play();
+            videoPlayerKilu.firstChild.nodeValue = 'Pause';
+        }
+    });
+</script>
+                
+             
+
+              <!-- Picture's description below this one -->
+              <figcaption itemprop="caption description">
+                <div class="photo-details">
+                  <h4>Kiluminati - Bespoke 3D Logo Animation</h4>
+
+                  <span class="border"></span>
+
+                  <p>
+                   We created a bespoke 3D logo reveal and dynamic motion graphics tailored for a streamer. 
+                  </p>
+                  <!-- VIEW MORE BUTTON AND DIV-->             
+     <div></br>
+       <button class="btn btn-color" onclick="toggleMoreInfo(17)">More Info</button></br>
+      
+       
+      
+  
+  <div id="moreInfoDiv17" class="more-info">
+  </br>
+
+<p>
+  Using Adobe After Effects and Maxon Cinema 4D, we created an animation designed to enhance brand identity. Animation was meticulously crafted to deliver an unique and immersive experience, aligning with streamer personal style. This project emphasizes our commitment to innovative design, tailored to elevate streamers' visual branding and engage their audience effectively.
+</p> </br>
+
+
+
+                  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/VXYS3I8CYkU?" frameborder="0" allowfullscreen></iframe> 
+   
+  </div>
+</br>
+<div class="image-grid2">
+        <div class="image-grid-item2">
+            <img src="img/kilu_01.png" alt="3D Render K">
+        </div>
+        <div class="image-grid-item2">
+            <img src="img/kilu_02.png" alt="3D Render Instagram">
+        </div>
+        <div class="image-grid-item2">
+            <img src="img/kilu_03.png" alt="3D Render Donation">
+        </div>
+        <div class="image-grid-item2">
+            <img src="img/kilu_04.png" alt="3D Render Wolf Studios">
+        </div>
+        </div>
+
+   <p> <a style="color:#007bff;" class="socials-links" href="https://www.twitch.tv/kiluminati">twitch.tv/Kiluminati</a> </p>
+                 
+  </div>
+</div>
+<!-- VIEW MORE BUTTON AND DIV-->  
+ 
+                </div>
+              </figcaption>
+            </figure>
+            
+<!-- Item Kilu -->
+
+
+
+<!-- Item Boit -->
+
+
+
+            <!-- Item boit -->
+            <figure
+              itemprop="associatedMedia"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+              class="col-12 col-lg-12"
+            >
+              <!-- Link to the picture and to open the gallery / Fill up well the data-size property -->
+             
+                <!-- Your picture -->
+                <video id="videoPlayerBoit"  itemprop="thumbnail"
+                  alt="Wolf Studios portfolio picture - BoitTV"
+                  class="img-fluid"
+                >
+                 <source src="img/boittv.webm" type="video/webm">
+        </video>
+        <script>
+        document.getElementById("videoPlayerBoit").controls = false;
+    var videoPlayerBoit = document.getElementById('videoPlayerBoit');
+
+    // Auto play, half volume.
+ 
+    // Play / pause.
+    videoPlayerBoit.addEventListener('click', function () {
+        if (videoPlayerBoit.paused == false) {
+            videoPlayerBoit.pause();
+            videoPlayerBoit.firstChild.nodeValue = 'Play';
+        } else {
+            videoPlayerBoit.play();
+            videoPlayerBoit.firstChild.nodeValue = 'Pause';
+        }
+    });
+</script>
+                
+             
+
+              <!-- Picture's description below this one -->
+              <figcaption itemprop="caption description">
+                <div class="photo-details">
+                  <h4>BoitTV - Logo Animation and Merch Commercials</h4>
+
+                  <span class="border"></span>
+
+                  <p>
+                    The project was expertly executed in After Effects, leveraging the cutting-edge Element3D to achieve exceptional visual fidelity and 3D visuals. Furthermore, the seamless integration of Magic Bullet plugins facilitated the comprehensive compositing process.
+                  </p>
+                  <!-- VIEW MORE BUTTON AND DIV-->             
+     <div></br>
+       <button class="btn btn-color" onclick="toggleMoreInfo(16)">More Info</button></br>
+      
+       
+      
+  
+  <div id="moreInfoDiv16" class="more-info">
+  </br>
+
+<p>
+  We recreated the look and feel of Age of Mythology Retold trailer video to be used as Twitch and Youtube Stream Intro Logo Animation. 3D Merch Commercial with Merh 3D models added to the stinger.
+</p> </br>
+
+
+
+                  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/x91EiQjJOTs?" frameborder="0" allowfullscreen></iframe> 
+      
+  </div>
+</br>
+<p> <a style="color:#007bff" class="socials-links" href="https://www.twitch.tv/iamboit" > twitch.tv/IamBoit </a> </p>
+                    <p> <a style="color:#007bff" class="socials-links" href="https://www.youtube.com/@BoItTV">youtube.com/BoitTV </a> </p>
+                 
+  </div>
+</div>
+<!-- VIEW MORE BUTTON AND DIV-->  
+ 
+                </div>
+              </figcaption>
+            </figure>
+            
+<!-- Item Boit -->
 
 <!-- Item 10 3D Phone -->
 
@@ -582,6 +804,89 @@ The animation was meticulously crafted with attention to detail, ensuring a seam
             </figure>
           
 <!-- Item BLUESOFT_Door_02 -->
+
+
+<!-- Item Shadowfax -->
+
+
+
+            <!-- Item shadow -->
+            <figure
+              itemprop="associatedMedia"
+              itemscope
+              itemtype="http://schema.org/ImageObject"
+              class="col-12 col-lg-12"
+            >
+              <!-- Link to the picture and to open the gallery / Fill up well the data-size property -->
+             
+                <!-- Your picture -->
+                <video id="videoPlayerShadowfax"  itemprop="thumbnail"
+                  alt="Wolf Studios portfolio picture - Shadowfax"
+                  class="img-fluid"
+                >
+                 <source src="img/shadowfax.webm" type="video/webm">
+        </video>
+        <script>
+        document.getElementById("videoPlayerShadowfax").controls = false;
+    var videoPlayerShadowfax = document.getElementById('videoPlayerShadowfax');
+
+    // Auto play, half volume.
+ 
+    // Play / pause.
+    videoPlayerShadowfax.addEventListener('click', function () {
+        if (videoPlayerShadowfax.paused == false) {
+            videoPlayerShadowfax.pause();
+            videoPlayerShadowfax.firstChild.nodeValue = 'Play';
+        } else {
+            videoPlayerShadowfax.play();
+            videoPlayerShadowfax.firstChild.nodeValue = 'Pause';
+        }
+    });
+</script>
+                
+             
+
+              <!-- Picture's description below this one -->
+              <figcaption itemprop="caption description">
+                <div class="photo-details">
+                  <h4>Shadowfax - Bespoke 3D Logo Animation and Overlay Graphics</h4>
+
+                  <span class="border"></span>
+
+                  <p>
+                    Shadowfax Logo Reveal is a specialized project focused on creating a unique 3D logo animation featuring a custom 3D ring engraved with intricate custom made Elvish textures. 
+                  </p>
+                  <!-- VIEW MORE BUTTON AND DIV-->             
+     <div></br>
+       <button class="btn btn-color" onclick="toggleMoreInfo(18)">More Info</button></br>
+      
+       
+      
+  
+  <div id="moreInfoDiv18" class="more-info">
+  </br>
+  
+<p>
+  This bespoke ring's animation highlights the movement and transformation of these engravings, generating an air of mystery and sophistication. Custom HDRI textures are employed to enhance lighting and reflections, adding depth and elegance to the animation. This project showcases our commitment to detailed craftsmanship, merging art and technology to deliver an immersive and captivating visual experience.
+</p> </br>
+<p>
+Additionally to the 3D Animation we created a streaming overlay with help of AI Crafted Backgrounds which were animated into a perfect loop creating a seamless stream experience.</p></br>
+
+                  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/4MGIAzoxDIY?" frameborder="0" allowfullscreen></iframe> 
+  </div>
+</br>
+  <p> <a style="color:#007bff" class="socials-links" href="https://www.twitch.tv/IamShadowfax" > twitch.tv/IamShadowfax </a> </p>
+                 
+  </div>
+</div>
+<!-- VIEW MORE BUTTON AND DIV-->  
+ 
+                </div>
+              </figcaption>
+            </figure>
+            
+<!-- Item Shadowfax -->
 
 
 
