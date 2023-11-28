@@ -187,7 +187,7 @@ table {
 }
 
 #loading #preloader:after {
-  content: "Wolf Studios is loading";
+  content: "Website is loading.. It might take a moment as we have an extensive portfolio which we want to present in high definition.";
   /* Text under the circles */
   position: absolute;
   text-transform: uppercase;
